@@ -34,9 +34,9 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 ```
 
 ## Challenge: 
-Could you solve it without converting the integer to a string?
+###Could you solve it without converting the integer to a string?
 
-Key : find each digit using mathematic method. 
+###Key : find each digit using mathematic method. 
 You can use mod method to find the remain in Java. like this
 
 ```
@@ -47,7 +47,6 @@ And use divid to move down the digits
 
 ```
 189 / 10 = 18 
-
 ```
 3rd key is to add each found digit to a variable in reverse sequence. 
 
@@ -57,8 +56,11 @@ x = 189
 digit = 189 % 10 = 9
 reverseX = reverseX *10 + digit => 0 *10 + 9 = 9
 x = 189/10 = 18
+
+loop through each digits;
 ```
 
+Here is the implementation in Java
 ```
 class Solution {
     public boolean isPalindrome(int x) {
@@ -79,6 +81,40 @@ class Solution {
     }
 }
 ```
+
+## optimization: 
+In fact , there is no need to looping through all digits. Only need to loop through half of digits. 
+```
+Example: 
+input: 18781
+
+loop each digits of 18781
+
+1 run :
+   x = 18781
+   digit = 18781 % 10 = 1
+   reverseX = 0*10 + 1 = 1
+   x = 18781 / 10 = 1878
+
+2 run :
+   x = 1878
+   digit = 1878 % 10 = 8
+   reverseX = 1*10 + 8 = 18
+   x = 1878 / 10 = 187
+
+3 run :
+    x = 187
+   digit = 187 % 10 = 7
+   reverseX = 18*10 + 7 = 187
+   x = 187 / 10 = 18
+
+since x < revserX, it already loop half of the digits
+now we can compare x and revserX. 
+There will be 2 scenarios
+ x = reverseX or x = reverseX/10
+
+```
+
 
 ```
 class Solution {
