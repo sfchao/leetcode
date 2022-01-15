@@ -115,11 +115,11 @@ There will be 2 scenarios
 
 ```
 ## Notes
--3 is not palindrome
-0 is palindrome
-3 is palindrome
-90 is not palindrome
-100 is not palindrome
+* -3 is not palindrome
+* 0 is palindrome
+* 3 is palindrome
+* 90 is not palindrome
+* 100 is not palindrome
 
 ```
 class Solution {
