@@ -82,7 +82,7 @@ class Solution {
 }
 ```
 
-## optimization: 
+## Optimization: 
 In fact , there is no need to looping through all digits. Only need to loop through half of digits. 
 ```
 Example: 
