@@ -1,7 +1,7 @@
 # '9. Palindrome Number'
 https://leetcode.com/problems/palindrome-number/
 
-# Problem
+## Problem
 Given an integer x, return true if x is palindrome integer.
 
 An integer is a palindrome when it reads the same backward as forward.
@@ -33,8 +33,33 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 -231 <= x <= 231 - 1
 ```
 
-# Challenge: Could you solve it without converting the integer to a string?
+## Challenge: 
+Could you solve it without converting the integer to a string?
 
+Key : find each digit using mathematic method. 
+You can use mod method to find the remain in Java. like this
+
+```
+19 % 10 => 9
+```
+
+And use divid to move down the digits 
+
+```
+189 / 10 = 18 
+
+```
+3rd key is to add each found digit to a variable in reverse sequence. 
+
+```
+reverseX = 0 
+x = 189
+digit = 189 % 10 = 9
+reverseX = reverseX *10 + digit => 0 *10 + 9 = 9
+x = 189/10 = 18
+```
+
+```
 class Solution {
     public boolean isPalindrome(int x) {
         // if x is negtive or is end with 0 
@@ -53,9 +78,9 @@ class Solution {
         
     }
 }
+```
 
-
-
+```
 class Solution {
     public boolean isPalindrome(int x) {        
        if (x < 0 || (x != 0 && x % 10 == 0)){
@@ -70,3 +95,4 @@ class Solution {
         return (processX == reverseX || processX == reverseX/10);
     }
 }
+```
