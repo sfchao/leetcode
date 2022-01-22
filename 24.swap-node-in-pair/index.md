@@ -44,24 +44,24 @@ More details about linked list at here https://www.educative.io/edpresso/what-is
 
 ## Solution
 This problem rate as medium, but it's not that hard, it's good problem to get familiar with linked list and how to swap node. 
-The keys for swap the node is to update the link to the correct node. 
+The key for swap the node is to update the link to the correct node. 
 
->> Example: 1-2-3-4
+Example: 1-2-3-4
 Use the variable firstNode , secondNode , thirtdNode, and preNode to iterate the nodes for swaping link(next) pointer
-1 Update 1 next link point to 3 (firstNode.next = thirdNode)
-2 Update 2 next link point to 1 (secondNode.next = firstNode)
-3 Update the head to 2 (head = secondNode)
+* Update 1 next link point to 3 (firstNode.next = thirdNode)
+* Update 2 next link point to 1 (secondNode.next = firstNode)
+* Update the head to 2 (head = secondNode)
 
-![Screenshot](Swap-pair-solution1)
+![Screenshot](Swap-pair-solution1.png)
 
 Next , move to next 3 nodes, you will need to know the firstNode, secondNode, thridNode, and also the preNode
-1 first step set preNode firstNode, then 
-2 move the firstNode variable to thirdNode
-3 move the secondNode to firstNode.next
-4 move the thirdNode to secondNode.next
-5 repeat the same swap logic
+* first step set preNode firstNode, then 
+* move the firstNode variable to thirdNode
+* move the secondNode to firstNode.next
+* move the thirdNode to secondNode.next
+* repeat the same swap logic
 
-![Screenshot](Swap-pair-solution2)
+![Screenshot](Swap-pair-solution2.png)
 
 Looping throught while firstNode and secondNode is not nll
 
