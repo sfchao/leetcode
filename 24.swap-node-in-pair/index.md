@@ -44,24 +44,24 @@ More details about linked list at here https://www.educative.io/edpresso/what-is
 
 ## Solution
 This problem rate as medium, but it's not that hard, it's good problem to get familiar with linked list and how to swap node. 
-The key for swap the node is to update the link to the correct node. 
+The keys for swap the node is to update the link to the correct node. 
 
-Example: 1-2-3-4
+>> Example: 1-2-3-4
 Use the variable firstNode , secondNode , thirtdNode, and preNode to iterate the nodes for swaping link(next) pointer
-* Update 1 next link point to 3 (firstNode.next = thirdNode)
-* Update 2 next link point to 1 (secondNode.next = firstNode)
-* Update the head to 2 (head = secondNode)
+1 Update 1 next link point to 3 (firstNode.next = thirdNode)
+2 Update 2 next link point to 1 (secondNode.next = firstNode)
+3 Update the head to 2 (head = secondNode)
 
-![Screenshot](Swap-pair-solution1.png)
+![Screenshot](Swap-pair-solution1)
 
 Next , move to next 3 nodes, you will need to know the firstNode, secondNode, thridNode, and also the preNode
-* first step set preNode firstNode, then 
-* move the firstNode variable to thirdNode
-* move the secondNode to firstNode.next
-* move the thirdNode to secondNode.next
-* repeat the same swap logic
+1 first step set preNode firstNode, then 
+2 move the firstNode variable to thirdNode
+3 move the secondNode to firstNode.next
+4 move the thirdNode to secondNode.next
+5 repeat the same swap logic
 
-![Screenshot](Swap-pair-solution2.png)
+![Screenshot](Swap-pair-solution2)
 
 Looping throught while firstNode and secondNode is not nll
 
@@ -78,7 +78,6 @@ Looping throught while firstNode and secondNode is not nll
  * }
  */
 class Solution {
-    
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.next == null)
             return head;
@@ -93,9 +92,10 @@ class Solution {
             // swap             
             secondNode.next = firstNode;
             firstNode.next = thirdNode;
-            if (pre != null)
+            if (pre != null) // just like head = second, after the first 2 node, need to linked pre.next to secondNode
                 pre.next = secondNode;
-            // move each node to next 4 items            
+
+            // move each variable to next 3 node also preserver pre node            
             pre = firstNode;  // the next pre node is the 2nd position which is the firstNode
             firstNode = thirdNode;  //move the first node to the 3nd node
             if (firstNode != null)
@@ -103,8 +103,7 @@ class Solution {
             if (secondNode != null)
                 thirdNode = secondNode.next; // get the third node
         }
-        
         return head;
-    }   
+    }
 }
 ```

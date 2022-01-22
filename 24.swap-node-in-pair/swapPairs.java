@@ -24,9 +24,10 @@ class Solution {
             // swap             
             secondNode.next = firstNode;
             firstNode.next = thirdNode;
-            if (pre != null)
+            if (pre != null) // just like head = second, after the first 2 node, need to linked pre.next to secondNode
                 pre.next = secondNode;
-            // move each node to next 4 items            
+
+            // move each variable to next 3 node also preserver pre node            
             pre = firstNode;  // the next pre node is the 2nd position which is the firstNode
             firstNode = thirdNode;  //move the first node to the 3nd node
             if (firstNode != null)
@@ -34,9 +35,6 @@ class Solution {
             if (secondNode != null)
                 thirdNode = secondNode.next; // get the third node
         }
-        
         return head;
     }
-    
-    
 }
