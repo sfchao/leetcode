@@ -46,7 +46,7 @@ More details about linked list at here https://www.educative.io/edpresso/what-is
 This problem rate as medium, but it's not that hard, it's good problem to get familiar with linked list and how to swap node. 
 The keys for swap the node is to update the link to the correct node. 
 
->> Example: 1-2-3-4
+### Example: 1-2-3-4
 Use the variable firstNode , secondNode , thirtdNode, and preNode to iterate the nodes for swaping link(next) pointer
 * Update 1 next link point to 3 (firstNode.next = thirdNode)
 * Update 2 next link point to 1 (secondNode.next = firstNode)
