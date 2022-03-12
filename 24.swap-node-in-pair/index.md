@@ -35,7 +35,12 @@ A linked list is a common data structure made of a chain of nodes in which each 
 
 The head pointer points to the first node, and the last element of the list points to null. When the list is empty, the head pointer points to null.
 
-More details about linked list at here https://www.educative.io/edpresso/what-is-a-linked-list
+More details about linked list at here 
+
+https://www.geeksforgeeks.org/data-structures/linked-list/
+
+https://www.educative.io/edpresso/what-is-a-linked-list
+
 
 ### There are 3 type of basic linked list
 * Singly-linked-list => one direction 
