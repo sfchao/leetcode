@@ -50,6 +50,8 @@ The main idea behind the sliding window technique is to convert two nested loops
 
 Use right and left pointer, the right pointer hold the postion of the starting of the none-repeated-substring. Move the left pointer to each chararter. Use a HashSet or HashMap to store the character and the index position. Loop througth each character, if the character is found in the HashMap, calcuate the length, and move up the start pointer to the last character position +1. 
 
+https://www.baeldung.com/cs/sliding-window-algorithm
+
 ## The Optimized Solution
 I had referenced to one of the explanation of using sliding window algorithm, but in that article it mention keep tracking and remove the elements which index was before new identical character. In fact, there is no need to keep tracking of or previous character since it just asking for the length of the substring not the actual substring. Therefore only need to calculate the length each time there is a match on the character. 
 
