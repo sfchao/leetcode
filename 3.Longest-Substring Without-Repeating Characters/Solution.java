@@ -38,8 +38,6 @@ public class Solution{
                 
                 }
                 System.out.println("isUniqe" + isUniqe);
-                          
-
                 if (isUniqe){
                     tempLen = endI - startI;
                     if (tempLen > result){
